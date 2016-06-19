@@ -1,0 +1,178 @@
+/*
+**********************************
+  1. Header
+  2. Goal
+  3. Features
+  4. Description
+  5. Image
+**********************************
+*/
+
+body{
+  font-size: 14px;
+}
+//********************************
+// 1. Header
+.header {
+  position: relative;
+  font: 1em/1 @font-family-base; // 14px % 14px
+  outline: 0;
+  border:0;
+  background: @color-bg;
+  background: url('@{img-folder}/Laptop.png') 90% 100% no-repeat,
+              url('@{img-folder}/clouds.png') 0 100% repeat-x,
+    @color-bg url('@{img-folder}/clouds-transparent.png') 0 100% repeat-x;
+
+  @media (min-width: 1500px) {
+    background: url('@{img-folder}/Laptop.png') 60% 100% no-repeat,
+                url('@{img-folder}/clouds.png') 0 101% repeat-x,
+      @color-bg url('@{img-folder}/clouds-transparent.png') 0 100% repeat-x;
+  }
+
+  @media (max-width: @screen-md) {
+    background: url('@{img-folder}/clouds.png') 0 100% repeat-x,
+    @color-bg url('@{img-folder}/clouds-transparent.png') 0 100% repeat-x;
+  }
+}
+
+//********************************
+// 2. Goal
+.goal {
+  &:extend(.container);
+
+  &__text {
+    margin: 4.85em 0 1.71em 0; // 170px % 35px, 60px % 35px
+    font: bold 2.5em/1.42 @font-family-base; // 35px % 14px
+    color: @color-text;
+  }
+
+  &__btn {
+    margin-bottom: 15.35em; // 215px % 14px
+  }
+
+  @media (max-width: @screen-md) {
+    .text-center;
+
+    &__text {
+      margin-top: 2.85em; // 100px % 35px
+    }
+  }
+
+  @media (max-width: @screen-xs) {
+    &__text {
+      font-size: 2em; // 28px % 14px
+    }
+
+    &__btn {
+      margin-bottom: 10.7em; // 150px % 14px
+    }
+  }
+}
+
+//********************************
+// 3. Features
+.features {
+  &:extend(.container);
+  padding: 85px 0 145px;
+}
+
+//********************************
+// 4. Description
+.description{
+  .text-center();
+
+  &__header{
+    margin: 0;
+    margin-bottom: 1.6em; // 40px % 25px
+    font: bold 1.78em/1 @font-family-desc; //25px % 14px
+    color: @color-desc-header;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 3em; // 45px % 15px
+    font: 1.07em/1.6 @font-family-desc; // 15px % 14px
+    color: @color-desc-text;
+
+    @media (max-width: @screen-sm) {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+//********************************
+// 5. Image
+.img {
+  position: relative;
+  float: left;
+  width: 25%;
+  .text-center;
+
+  &:nth-of-type(1) {
+    margin-right: 6.25%;
+  }
+
+  &:nth-of-type(2) {
+    margin-left: 6.25%;
+    margin-right: 6.25%;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 35%;
+      display: block;
+      width: 16.25%; // 39px % 240px
+      height: 5%; // 12px % 240px
+      content: '';
+      .bg-img('Arrow.png');
+      background-size: contain;
+    }
+
+    &:before {
+      left: -30%;
+    }
+
+    &:after {
+      right: -30%;
+    }
+
+  }
+  &:nth-of-type(3) {
+    margin-left: 6.25%;
+  }
+
+  &__item {
+    .img-responsive;
+    .block-center;
+  }
+
+  &__text {
+    margin-top: 2.5em; // 50px % 20px
+    font: 1.42em/1 @font-family-img; // 20px % 14px
+    color: @color-img-text;
+  }
+
+}
+
+@media (max-width: @screen-md) {
+  .img__text {
+    font-size: 1.14em; // 16px % 14px
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .img__text {
+    font-size: 0.85em; // 12px % 14px
+  }
+
+  .img:nth-of-type(2):before,
+  .img:nth-of-type(2):after {
+    top: 25%;
+  }
+
+}
+
+
+
+

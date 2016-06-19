@@ -1,0 +1,240 @@
+//
+// Carousel
+// --------------------------------------------------
+//
+
+// Wrapper for the slide container and indicators
+.carousel {
+  &:extend(.container);
+  position: relative;
+  padding-bottom: 5.71em; // 80px % 14px
+}
+
+// Company indicator
+.carousel-indicators {
+  &:extend(.clearfix all);
+  margin: 4.28em 0 2.85em; // 60px % 14px, 40px % 14px
+  list-style: none;
+
+  &__item {
+    display: block;
+    float: left;
+    margin: 0 auto;
+    width: 16.66%;
+    opacity: .3;
+    cursor: pointer;
+    // IE8-9 hack for event handling
+    //
+    // Internet Explorer 8-9 does not support clicks on elements without a set
+    // `background-color`, so we set alpha transparency for the best results possible.
+    background-color: rgba(0,0,0,0); // IE9
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: @screen-md) {
+      width: 33.33%;
+    }
+  }
+
+  .active {
+    opacity: 1;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .carousel-indicators {
+    margin: 0;
+    margin-bottom: 20px;
+
+    &__item {
+      display: none;
+      margin: 0;
+    }
+
+    .active {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.carousel-inner {
+  &:extend(.clearfix all);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  .text-center;
+
+
+  > .item {
+    display: none;
+    position: relative;
+    .transition(.6s ease-in-out left);
+
+    h2 {
+      margin: 0;
+      font: 1.42em/1 @font-family-crsl; // 20px % 14px
+      color: @color-crsl-header;
+    }
+
+    blockquote {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 3.57em 0; // 50px % 14px
+      height: 7.14em; // 100px % 14px
+      font: italic 1.14em/1.5 @font-family-crsl; // 16px % 14px
+      color: @color-crsl-text;
+    }
+
+    cite{
+      font: italic 1.07em/1 @font-family-crsl; // 15px % 14px
+      color: @color-crsl-header;
+    }
+
+    @media (max-width: @screen-md) {
+      padding: 0 10.41%;
+      blockquote {
+        height: 8.57em; // 120px % 14px
+        br {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: @screen-xs) {
+      blockquote {
+        height: 15.71em // 220px % 14px
+      }
+    }
+
+
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      .transition(~'transform 0.6s ease-in-out');
+      backface-visibility: hidden;
+      perspective: 1000px;
+
+      &.next,
+      &.active.right {
+        transform: translate3d(100%, 0, 0);
+        left: 0;
+      }
+
+      &.prev,
+      &.active.left {
+        transform: translate3d(-100%, 0, 0);
+        left: 0;
+      }
+
+      &.next.left,
+      &.prev.right,
+      &.active {
+        transform: translate3d(0, 0, 0);
+        left: 0;
+      }
+    }
+  }
+
+  > .active,
+  > .next,
+  > .prev {
+    display: block;
+  }
+
+  > .active {
+    left: 0;
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+  }
+  > .active.right {
+    left: 100%;
+  }
+}
+
+
+// Left/right controls for nav
+// ---------------------------
+.control {
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  width: 10%;
+  text-align: center;
+  // Fix IE9 click-thru bug
+  background-color: rgba(0, 0, 0, 0);
+
+  &__left {
+    left: 0;
+  }
+
+  &__right {
+    right: 0;
+  }
+
+  // Hover/focus state
+  &:hover {
+    background-color: rgba(0, 0, 0, .05);
+    text-decoration: none;
+
+    .arrow-left{
+      background-position: -10px -0px;
+    }
+
+    .arrow-right{
+      background-position: -10px -48px;
+    }
+  }
+  &:focus {
+    outline: 0;
+  }
+
+  // Toggles
+  .arrow-left,
+  .arrow-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 5;
+    display: inline-block;
+  }
+
+  .arrow-left {
+    left: ~'calc(50% - 10px)';
+  }
+
+  .arrow-right {
+    right: ~'calc(50% - 10px)';
+  }
+
+  @media (max-width: @screen-md) {
+    top: 35%;
+  }
+
+  @media (max-width: @screen-xs) {
+    top: 0;
+  }
+}
+
+
+

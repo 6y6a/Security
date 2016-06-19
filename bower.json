@@ -1,0 +1,22 @@
+{
+  "name": "Security",
+  "description": "Web page of secure org",
+  "main": "index.js",
+  "authors": [
+    "Gubin"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.3",
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -1,0 +1,6 @@
+//Set background image
+.bg-img(@img-url, @color: #fff, @pos: center bottom, @repeate: no-repeat){
+  background: @color;
+  background: url('@{img-folder}/@{img-url}') @pos @repeate;
+  background-size: cover;
+}

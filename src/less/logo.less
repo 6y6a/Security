@@ -1,0 +1,23 @@
+.logo {
+  display: inline-block;
+
+  &__image {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.57em; // 8px % 14px
+    width: 3.57em;        // 50px % 14px
+    height: 4em;          // 56px % 24px
+    .bg-img('shield-block.png');
+    .transition;
+
+    &:hover {
+      background-image: url('@{img-folder}/shield-heart.png');
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    font: bold 1.71em/1 @font-family-logo; // 24px % 14px
+    color: @color-logo;
+  }
+}

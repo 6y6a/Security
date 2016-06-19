@@ -1,0 +1,11 @@
+//Create deep font-face rule
+.add-font(@font-name, @font-url, @font-weight: normal, @font-style: normal){
+  font-family: '@{font-name}';
+  src: url('@{font-folder}/@{font-url}.eot');
+  src: url('@{font-folder}/@{font-url}.eot?#iefix') format('embedded-opentype'),
+  url('@{font-folder}/@{font-url}.woff') format('woff'),
+  url('@{font-folder}/@{font-url}.ttf') format('truetype'),
+  url('@{font-folder}/@{font-url}.svg#FontName') format('svg');
+  font-style: @font-style;
+  font-weight: @font-weight;
+}

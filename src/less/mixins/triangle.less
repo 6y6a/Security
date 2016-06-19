@@ -1,0 +1,47 @@
+// Triagle  CSS
+.triangle(){
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.triangle-left(){
+  .triangle;
+  border-color: transparent @triangle-color transparent transparent;
+  border-width: @triangle-width;
+}
+.triangle-right(){
+  .triangle;
+  border-color: transparent transparent transparent @triangle-color;
+  border-width: @triangle-width;
+}
+.triangle-top(){
+  .triangle;
+  border-color: transparent transparent @triangle-color transparent;
+  border-width: @triangle-width;
+}
+.triangle-bottom(){
+  .triangle;
+  border-color: @triangle-color transparent transparent transparent;
+  border-width: @triangle-width;
+}
+.triangle-pos-left(){
+  position: absolute;
+  top: ~'calc(50% - @{triangle-width})';
+  left: -@triangle-width * 2 + 1;
+}
+.triangle-pos-right(){
+  position: absolute;
+  top: ~'calc(50% - @{triangle-width})';
+  right: -@triangle-width * 2;
+}
+.triangle-pos-top(){
+  position: absolute;
+  top: -@triangle-width * 2;
+  left: ~'calc(50% - @{triangle-width} / 2)';
+}
+.triangle-pos-bottom(){
+  position: absolute;
+  bottom: -@triangle-width * 2;
+  left: ~'calc(50% - @{triangle-width} / 2)';
+}

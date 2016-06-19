@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Security</title>
+    <link rel="stylesheet" href="./css/libs.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="navigation">
+        <div class="logo">
+            <span class="logo__image"></span><!--
+         --><span class="logo__name">Protectly</span>
+        </div>
+        <div class="menu navigation__menu">
+            <span class="menu__icon icon-navicon toggled"></span>
+            <ul class="menu_toggle">
+                <li class="menu__item "><a class="menu__item_link" href="#">Product</a></li>
+                <li class="menu__item"><a class="menu__item_link" href="#">Industries</a></li>
+                <li class="menu__item"><a class="menu__item_link" href="#">Pricing</a></li>
+                <li class="menu__item"><a class="menu__item_link" href="#">Features</a></li>
+            </ul>
+        </div>
+        <div class="contact navigation__contact">
+            <span class="contact__icon icon-volume-control-phone"></span><!--
+         --><span class="contact__data">+1 (888) 675-4998</span>
+        </div>
+    </div>
+    <div class="goal">
+        <h1 class="goal__text">Protect Your sensitive <br> files across cloud services.</h1>
+        <div class="btn">
+            <a class="btn__text" href="#">Try it out for free !</a>
+        </div>
+        <div class="btn-link goal__btn">
+            <span class="btn-link__icon icon-play-alt"></span><!--
+         --><a class="btn-link__text" href="#">Watch the Video</a>
+        </div>
+    </div>
+</header>
+
+<section id="testiomonials-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li class="carousel-indicators__item" data-target="#testiomonials-carousel" data-slide-to="0">
+            <img class="img-responsive block-center" src="./img/pinterest.png" alt="pinterest">
+        </li>
+        <li class="carousel-indicators__item active" data-target="#testiomonials-carousel" data-slide-to="1" >
+            <img class="img-responsive block-center" src="./img/99designs.png" alt="99designs">
+        </li>
+        <li class="carousel-indicators__item" data-target="#testiomonials-carousel" data-slide-to="2">
+            <img class="img-responsive block-center" src="./img/disqus.png" alt="discus">
+        </li>
+        <li class="carousel-indicators__item" data-target="#testiomonials-carousel" data-slide-to="3">
+            <img class="img-responsive block-center" src="./img/freshbooks.png" alt="freshbooks">
+        </li>
+        <li class="carousel-indicators__item" data-target="#testiomonials-carousel" data-slide-to="4">
+            <img class="img-responsive block-center" src="./img/newrelic.png" alt="newrelic">
+        </li>
+        <li class="carousel-indicators__item" data-target="#testiomonials-carousel" data-slide-to="5">
+            <img class="img-responsive block-center" src="./img/klout.png" alt="klout">
+        </li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <div class="item">
+            <h2>Pinterest</h2>
+            <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                Asperiores consectetur consequuntur dolores excepturi magnam mollitia pariatur quaerat
+                recusandae. <br> Aperiam commodi consequatur cumque cupiditate debitis dicta dolorum, ducimus,
+                est hic id iusto maxime <br> molestias mollitia nam neque nesciunt numquam odit possimus
+            </blockquote>
+            <cite> Moon Brandon, <a href="#">Pinterest.com</a></cite>
+        </div>
+        <div class="item active">
+            <h2>Good service for our goals</h2>
+            <blockquote>We’re all about making sure you have a great experience with our software
+                <br>
+                Our real, live customer support team will go out of their way to help you-by phone or
+                by email. <br> For free. We also have free video tutorials, forums, training webinars,
+                whitepapers, <br> and a great knowlendgebase you can access 24/7.
+            </blockquote>
+            <cite> Alice Anderson, <a href="#">99design.com</a></cite>
+        </div>
+        <div class="item">
+            <h2>Disqus</h2>
+            <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                Asperiores consectetur consequuntur dolores excepturi magnam mollitia pariatur quaerat
+                recusandae. <br> Aperiam commodi consequatur cumque cupiditate debitis dicta dolorum, ducimus,
+                est hic id iusto maxime <br> molestias mollitia nam neque nesciunt numquam odit possimus
+            </blockquote>
+            <cite> Bradley Harvey, <a href="#">Disqus.com</a></cite>
+        </div>
+        <div class="item">
+            <h2>Freshbooks</h2>
+            <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                Asperiores consectetur consequuntur dolores excepturi magnam mollitia pariatur quaerat
+                recusandae. <br> Aperiam commodi consequatur cumque cupiditate debitis dicta dolorum, ducimus,
+                est hic id iusto maxime <br> molestias mollitia nam neque nesciunt numquam odit possimus
+            </blockquote>
+            <cite> Don Archer, <a href="#">Frechbooks.com</a></cite>
+        </div>
+        <div class="item">
+            <h2>New Relic</h2>
+            <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                Asperiores consectetur consequuntur dolores excepturi magnam mollitia pariatur quaerat
+                recusandae. <br> Aperiam commodi consequatur cumque cupiditate debitis dicta dolorum, ducimus,
+                est hic id iusto maxime <br> molestias mollitia nam neque nesciunt numquam odit possimus
+            </blockquote>
+            <cite> Artur Conor, <a href="#">Newrelic.com</a></cite>
+        </div>
+        <div class="item">
+            <h2>Klout</h2>
+            <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                Asperiores consectetur consequuntur dolores excepturi magnam mollitia pariatur quaerat
+                recusandae. <br> Aperiam commodi consequatur cumque cupiditate debitis dicta dolorum, ducimus,
+                est hic id iusto maxime <br> molestias mollitia nam neque nesciunt numquam odit possimus
+            </blockquote>
+            <cite> Antony Garsias, <a href="#">Klout.com</a></cite>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="control control__left" href="#testiomonials-carousel" role="button" data-slide="prev">
+        <span class="arrow-left" aria-hidden="true"></span>
+    </a>
+    <a class="control control__right" href="#testiomonials-carousel" role="button" data-slide="next">
+        <span class="arrow-right" aria-hidden="true"></span>
+    </a>
+
+</section>
+
+<section class="features">
+    <div class="description">
+        <h2 class="description__header">Protectly protects your sensitive files.</h2>
+        <p class="description__text">We protect your sensitive files across all popular
+            cloud services and devices, by encrypting them,<br>
+            controlling access to them and providing an audit trail for all changes to your files.
+        </p>
+    </div>
+    <figure class="img">
+        <img class="img__item" src="./img/file-sharing.png" alt="page">
+        <figcaption class="img__text">Compliant file Sharing</figcaption>
+    </figure>
+    <figure class="img">
+        <img class="img__item" src="./img/security.png" alt="shield-block">
+        <figcaption class="img__text">Endpoint Security</figcaption>
+    </figure>
+    <figure class="img">
+        <img class="img__item" src="./img/access.png" alt="iphone">
+        <figcaption class="img__text">Access Control</figcaption>
+    </figure>
+</section>
+
+<footer class="footer">
+    <div class="footer-navigation">
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+        <div class="footer-menu">
+            <h3 class="footer-menu__header">Protectly</h3>
+            <ol class="footer-list">
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Getting Started</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Enterprise Features</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Why Us?</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Solution</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Pricing</a></li>
+            </ol>
+        </div>
+        <div class="footer-menu">
+            <h3 class="footer-menu__header">About Us</h3>
+            <ol class="footer-list">
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Our Story</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Our Leadership</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Our Investors</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Jobs</a></li>
+            </ol>
+        </div>
+        <div class="footer-menu">
+            <h3 class="footer-menu__header">Support</h3>
+            <ol class="footer-list">
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Help</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Privacy Policy</a></li>
+                <li class="footer-list__item"><a class="footer-list__item_link" href="">Terms of Use</a></li>
+            </ol>
+        </div>
+        <div class="footer-contact">
+            <div class="btn-social footer-contact__btn-social">
+                <span class="btn-social__icon btn-social__icon_fb icon-facebook-square"></span>
+                <a class="btn-social__link btn-social__link_fb" href="http://www.facebook.com">Like</a>
+            </div>
+            <div class="btn-tooltip footer-contact__btn-tooltip">
+                <div class="triangle triangle-pos"></div>
+                <a>1.6m</a>
+            </div>
+            <div class="btn-social footer-contact__btn-social">
+                <span class="btn-social__icon btn-social__icon_tw icon-twitter"></span>
+                <a class="btn-social__link btn-social__link_tw" href="http://www.twitter.com">Tweet</a>
+            </div>
+            <div class="btn-tooltip footer-contact__btn-tooltip">
+                <div class="triangle triangle-pos"></div>
+                <a>93</a>
+            </div>
+            <div class="footer-phone">
+                <span class="footer-phone__icon icon-phone"></span>
+                <span class="footer-phone__data">+1 (888) 675-4998</span>
+            </div>
+            <div class="footer-email">
+                <span class="footer-email__icon icon-mail"></span>
+                <span class="footer-email__data">info@mail.com</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

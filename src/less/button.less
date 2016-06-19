@@ -1,0 +1,135 @@
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1.14em 1.42em; // 16px % 14px, 20px % 14px
+  background: @color-btn-bg;
+  white-space: nowrap;
+  border-radius: 0.21em; // 3px % 14px
+  .transition;
+
+  &__text {
+    font: bold 1.14em/1 @font-family-base; // 16px % 14px
+    .text-noline;
+    color: @color-btn-text;
+
+    &:hover{
+      color: @color-btn-text;
+      .text-noline;
+    }
+  }
+
+  &:hover{
+    background-color: darken(@color-btn-bg, 15%);
+    cursor: pointer;
+  }
+}
+
+.btn-link {
+  &:extend(.btn);
+  padding: 1em 1.42em; // 20px % 14px
+  background: @color-btn-link-bg;
+  border: 1px solid transparent;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.71em; // 10px % 14px
+    font-size: 1.28em; // 18px % 14px
+    color: @color-btn-link-text;
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    font: 1.07em/1 @font-family-base; // 15px % 14px
+    text-decoration: underline;
+    color: @color-btn-link-text;
+
+    &:hover,
+    &:focus{
+      color: @color-btn-text;
+    }
+  }
+
+  &:hover{
+    opacity: .9;
+    border: 1px solid @color-btn-link-text;
+    cursor: pointer;
+  }
+}
+
+.btn-social {
+  position: relative;
+  display: inline-block;
+  padding: 0.27em 0.45em; // 3px % 11px, 5px % 11px
+  height: 1.8em; // 20px % 11px
+  background: @color-btn-scl-bg;
+  font: 0.78em/1 @font-family-scl; // 11px % 14px
+  border: 1px solid @color-btn-scl-brd;
+  border-radius: 0.18em; // 2px % 11px
+  cursor: pointer;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.27em;
+    color: black;
+
+    &_fb {
+      color: #3b579d;
+    }
+
+    &_tw {
+      color: #009fda;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+
+    &_fb {
+      color: #3b579d;
+    }
+
+    &_tw {
+      color: #333;
+    }
+
+    &:hover {
+      .text-noline;
+    }
+  }
+
+
+}
+
+.btn-tooltip {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 3px;
+  font: 11px/1 "LucidaGrande", sans-serif;
+  background: #fff;
+  border: 1px solid #c1c1c1;
+  border-radius: 2px;
+
+  a {
+    color: #000;
+    &:hover {
+      .text-noline;
+      cursor: default;
+    }
+  }
+
+
+}
+
+.triangle {
+  .triangle();
+  .triangle-left();
+}
+
+.triangle-pos {
+  .triangle-pos-left();
+}

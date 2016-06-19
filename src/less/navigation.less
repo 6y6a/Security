@@ -1,0 +1,23 @@
+.navigation {
+  &:extend(.container);
+  padding-top: 1.92em; // 27px % 14px
+  padding-bottom: 1.92em;
+
+  &__menu {
+    margin-left: 55px;
+
+    @media (max-width: @screen-md) {
+      float: right;
+      padding-top: 1.14em; // 16px % 14px
+    }
+  }
+
+  &__contact {
+    float: right;
+    padding: 1.28em 0; // 18px % 14px
+
+    @media (max-width: @screen-md) {
+      display: none;
+    }
+  }
+}
